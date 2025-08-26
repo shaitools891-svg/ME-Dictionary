@@ -38,10 +38,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 android-scroll">
       <Header />
       
-      <main className="max-w-md mx-auto pb-20">
+      <main className="max-w-md mx-auto pb-20 safe-area-bottom">
         <SearchSection
           searchQuery={searchQuery}
           onSearch={handleSearch}

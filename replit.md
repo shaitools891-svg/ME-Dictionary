@@ -2,7 +2,15 @@
 
 ## Overview
 
-This is a full-stack English-Bangla dictionary application built with React and Express. The app provides bilingual dictionary lookup, custom word management, offline package downloads, and prayer time scheduling features. It's designed as a mobile-first progressive web application with a clean, modern interface using shadcn/ui components.
+This is a full-stack English-Bangla dictionary application built with React and Express. The app provides bilingual dictionary lookup, custom word management, offline package downloads, and prayer time scheduling features. It's designed as a mobile-first progressive web application (PWA) with Android installation capabilities, featuring a clean, modern interface using shadcn/ui components.
+
+## Recent Changes (August 26, 2025)
+
+- **Android PWA Implementation**: Converted the web application to a Progressive Web App that can be installed on Android devices
+- **Android-Specific Features**: Added install banners, touch optimizations, vibration support, native sharing, and notification permissions
+- **Service Worker**: Implemented comprehensive service worker for offline functionality and background prayer notifications
+- **App Icons**: Generated and implemented app icons for various Android device densities
+- **Mobile Optimizations**: Added safe area support, touch-friendly UI elements, and Android-specific CSS optimizations
 
 ## User Preferences
 
