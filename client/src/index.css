@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 25%, 7.8431%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 25%, 7.8431%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 25%, 7.8431%);
+  --primary: hsl(173.4, 80.4%, 40%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(210, 25%, 7.8431%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(210, 3.3898%, 46.2745%);
+  --accent: hsl(180, 33%, 95%);
+  --accent-foreground: hsl(173.4, 80.4%, 40%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(173.4, 80.4%, 40%);
+  --chart-1: hsl(173.4, 80.4%, 40%);
+  --chart-2: hsl(160, 60%, 45%);
+  --chart-3: hsl(30, 80%, 55%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(340, 75%, 55%);
+  --radius: 0.75rem;
+  
+  /* Theme colors */
+  --teal-50: hsl(180, 100%, 98%);
+  --teal-100: hsl(166, 100%, 94%);
+  --teal-200: hsl(172, 100%, 87%);
+  --teal-500: hsl(173.4, 80.4%, 40%);
+  --teal-600: hsl(175.3, 77.4%, 32.2%);
+  --teal-700: hsl(175, 84%, 26%);
+  
+  --gray-50: hsl(210, 20%, 98%);
+  --gray-100: hsl(220, 14.3%, 95.9%);
+  --gray-200: hsl(220, 13%, 91%);
+  --gray-300: hsl(216, 12.2%, 83.9%);
+  --gray-400: hsl(218, 10.6%, 64.9%);
+  --gray-500: hsl(220, 8.9%, 46.1%);
+  --gray-600: hsl(215, 13.8%, 34.1%);
+  --gray-700: hsl(217, 19.1%, 26.7%);
+  --gray-800: hsl(215, 27.9%, 16.9%);
+  --gray-900: hsl(210, 25%, 7.8431%);
+  
+  /* Bengali font */
+  --font-bengali: 'Noto Sans Bengali', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+.dark {
+  --background: hsl(210, 25%, 7.8431%);
+  --foreground: hsl(0, 0%, 95%);
+  --card: hsl(210, 25%, 9%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(210, 25%, 9%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(173.4, 80.4%, 40%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 25%, 13%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --muted: hsl(210, 25%, 11%);
+  --muted-foreground: hsl(210, 3.3898%, 46.2745%);
+  --accent: hsl(210, 25%, 13%);
+  --accent-foreground: hsl(173.4, 80.4%, 40%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 25%, 13%);
+  --input: hsl(210, 25%, 13%);
+  --ring: hsl(173.4, 80.4%, 40%);
+}
+
+.theme-sepia {
+  --background: hsl(48, 100%, 96%);
+  --foreground: hsl(25, 20%, 25%);
+  --card: hsl(48, 100%, 98%);
+  --card-foreground: hsl(25, 20%, 25%);
+  --primary: hsl(25, 70%, 45%);
+  --primary-foreground: hsl(48, 100%, 96%);
+  --secondary: hsl(45, 20%, 90%);
+  --secondary-foreground: hsl(25, 20%, 25%);
+  --muted: hsl(45, 20%, 92%);
+  --muted-foreground: hsl(25, 10%, 50%);
+  --accent: hsl(45, 30%, 85%);
+  --accent-foreground: hsl(25, 70%, 45%);
+  --border: hsl(45, 20%, 88%);
+  --input: hsl(45, 20%, 88%);
+  --ring: hsl(25, 70%, 45%);
+}
+
+.theme-forest {
+  --background: hsl(125, 20%, 98%);
+  --foreground: hsl(125, 20%, 15%);
+  --card: hsl(125, 20%, 100%);
+  --card-foreground: hsl(125, 20%, 15%);
+  --primary: hsl(125, 60%, 35%);
+  --primary-foreground: hsl(125, 20%, 98%);
+  --secondary: hsl(125, 15%, 90%);
+  --secondary-foreground: hsl(125, 20%, 15%);
+  --muted: hsl(125, 15%, 92%);
+  --muted-foreground: hsl(125, 10%, 45%);
+  --accent: hsl(125, 25%, 85%);
+  --accent-foreground: hsl(125, 60%, 35%);
+  --border: hsl(125, 15%, 88%);
+  --input: hsl(125, 15%, 88%);
+  --ring: hsl(125, 60%, 35%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-[var(--font-inter)] antialiased;
+  }
+  
+  .font-bengali {
+    font-family: var(--font-bengali);
+  }
+  
+  .font-inter {
+    font-family: var(--font-inter);
+  }
+}
+
+@layer components {
+  .bg-primary-50 {
+    background-color: var(--teal-50);
+  }
+  
+  .bg-primary-100 {
+    background-color: var(--teal-100);
+  }
+  
+  .bg-primary-200 {
+    background-color: var(--teal-200);
+  }
+  
+  .bg-primary-500 {
+    background-color: var(--teal-500);
+  }
+  
+  .bg-primary-600 {
+    background-color: var(--teal-600);
+  }
+  
+  .bg-primary-700 {
+    background-color: var(--teal-700);
+  }
+  
+  .text-primary-600 {
+    color: var(--teal-600);
+  }
+  
+  .text-primary-700 {
+    color: var(--teal-700);
+  }
+  
+  .border-primary-500 {
+    border-color: var(--teal-500);
+  }
+  
+  .focus\:border-primary-500:focus {
+    border-color: var(--teal-500);
+  }
+  
+  .hover\:bg-primary-700:hover {
+    background-color: var(--teal-700);
+  }
+  
+  .hover\:text-primary-600:hover {
+    color: var(--teal-600);
+  }
+}
