@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Dictionary">
+  <meta name="theme-color" content="#0891b2">
+  <meta name="description" content="Bilingual Bangla-English dictionary with prayer time auto-silence feature">
+  
+  <link rel="manifest" href="/dictionary-app/manifest.json">
+  <link rel="icon" type="image/png" href="/dictionary-app/icon-192.png">
+  <link rel="apple-touch-icon" href="/dictionary-app/icon-192.png">
+  
+  <title>Bangla-English Dictionary</title>
+  <script>
+    // Redirect to main app
+    if (window.location.pathname === '/dictionary-app/404.html') {
+      window.location.href = '/dictionary-app/';
+    }
+  </script>
+</head>
+<body>
+  <div id="root">
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
+      <div style="text-align: center;">
+        <h2>Loading Dictionary App...</h2>
+        <p>If the app doesn't load, <a href="/dictionary-app/">click here</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
