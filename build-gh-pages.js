@@ -36,7 +36,7 @@ export default defineConfig({
       }
     }
   },
-  base: '/dictionary-app/',
+  base: '/ME-Dictionary/',
   define: {
     'process.env.NODE_ENV': '"production"',
     'import.meta.env.PROD': true
@@ -64,15 +64,15 @@ function createSPAFallback() {
   <meta name="theme-color" content="#0891b2">
   <meta name="description" content="Bilingual Bangla-English dictionary with prayer time auto-silence feature">
   
-  <link rel="manifest" href="/dictionary-app/manifest.json">
-  <link rel="icon" type="image/png" href="/dictionary-app/icon-192.png">
-  <link rel="apple-touch-icon" href="/dictionary-app/icon-192.png">
+  <link rel="manifest" href="/ME-Dictionary/manifest.json">
+  <link rel="icon" type="image/png" href="/ME-Dictionary/icon-192.png">
+  <link rel="apple-touch-icon" href="/ME-Dictionary/icon-192.png">
   
   <title>Bangla-English Dictionary</title>
   <script>
     // Redirect to main app
-    if (window.location.pathname === '/dictionary-app/404.html') {
-      window.location.href = '/dictionary-app/';
+    if (window.location.pathname === '/ME-Dictionary/404.html') {
+      window.location.href = '/ME-Dictionary/';
     }
   </script>
 </head>
@@ -81,7 +81,7 @@ function createSPAFallback() {
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
       <div style="text-align: center;">
         <h2>Loading Dictionary App...</h2>
-        <p>If the app doesn't load, <a href="/dictionary-app/">click here</a></p>
+        <p>If the app doesn't load, <a href="/ME-Dictionary/">click here</a></p>
       </div>
     </div>
   </div>

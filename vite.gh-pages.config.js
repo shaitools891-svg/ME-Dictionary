@@ -22,7 +22,7 @@ export default defineConfig({
       }
     }
   },
-  base: '/dictionary-app/',
+  base: '/ME-Dictionary/',
   define: {
     'process.env.NODE_ENV': '"production"',
     'import.meta.env.PROD': true
