@@ -29,19 +29,32 @@ export function useAndroidFeatures(): AndroidFeatures {
     // Listen for install prompt
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
+      // Store the event for later use
+      (window as any).deferredPrompt = e;
       setCanInstall(true);
+      console.log('Install prompt available');
     };
 
     // Listen for online/offline status
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
 
+    // Listen for successful installation
+    const handleAppInstalled = () => {
+      console.log('App was installed successfully');
+      setIsInstalled(true);
+      setCanInstall(false);
+      (window as any).deferredPrompt = null;
+    };
+
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleAppInstalled);
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleAppInstalled);
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };

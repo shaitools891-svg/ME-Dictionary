@@ -11,7 +11,10 @@ export default function AndroidInstallBanner() {
     if (canInstall && !isInstalled) {
       const hasSeenBanner = localStorage.getItem('hasSeenInstallBanner');
       if (!hasSeenBanner) {
-        setShowBanner(true);
+        // Add a small delay to ensure the banner appears after page load
+        setTimeout(() => {
+          setShowBanner(true);
+        }, 2000);
       }
     }
   }, [canInstall, isInstalled]);
@@ -24,9 +27,15 @@ export default function AndroidInstallBanner() {
       event.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
         }
         (window as any).deferredPrompt = null;
+      }).catch((error: any) => {
+        console.error('Install prompt error:', error);
       });
+    } else {
+      console.warn('No deferred prompt available');
     }
     setShowBanner(false);
     localStorage.setItem('hasSeenInstallBanner', 'true');

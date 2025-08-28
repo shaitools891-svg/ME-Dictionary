@@ -132,7 +132,7 @@ export default function Settings() {
                   <span className="text-gray-600 dark:text-gray-400">Cache</span>
                   <span className="text-gray-900 dark:text-gray-100">8.9 MB</span>
                 </div>
-                <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                <div className="pt-2 border-t border-gray-200 dark:border-gray-700 space-y-2">
                   <Button
                     variant="outline"
                     size="sm"
@@ -140,6 +140,17 @@ export default function Settings() {
                     data-testid="button-clear-cache"
                   >
                     Clear Cache
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full"
+                    onClick={() => {
+                      localStorage.removeItem('hasSeenInstallBanner');
+                      alert('Install banner reset! Refresh the page to see it again.');
+                    }}
+                  >
+                    Reset Install Banner
                   </Button>
                 </div>
               </div>

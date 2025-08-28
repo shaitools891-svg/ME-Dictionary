@@ -1,9 +1,9 @@
 const CACHE_NAME = 'dictionary-app-v1';
 const urlsToCache = [
-  '/',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png',
+  '/ME-Dictionary/',
+  '/ME-Dictionary/manifest.json',
+  '/ME-Dictionary/icon-192.png',
+  '/ME-Dictionary/icon-512.png',
   // Add other static assets as needed
 ];
 
@@ -70,7 +70,7 @@ self.addEventListener('fetch', event => {
         }).catch(() => {
           // Return offline page for navigation requests
           if (event.request.destination === 'document') {
-            return caches.match('/');
+            return caches.match('/ME-Dictionary/');
           }
         });
       })
@@ -148,8 +148,8 @@ async function scheduleNextPrayer(settings) {
 function showPrayerNotification(prayerName) {
   const options = {
     body: `${prayerName} prayer time has begun. Device set to silent mode.`,
-    icon: '/icon-192.png',
-    badge: '/icon-192.png',
+    icon: '/ME-Dictionary/icon-192.png',
+    badge: '/ME-Dictionary/icon-192.png',
     tag: 'prayer-notification',
     silent: true,
     actions: [
@@ -180,12 +180,12 @@ self.addEventListener('notificationclick', event => {
   event.waitUntil(
     clients.matchAll({ type: 'window' }).then(clientList => {
       for (let client of clientList) {
-        if (client.url === '/' && 'focus' in client) {
+        if (client.url.includes('/ME-Dictionary/') && 'focus' in client) {
           return client.focus();
         }
       }
       if (clients.openWindow) {
-        return clients.openWindow('/');
+        return clients.openWindow('/ME-Dictionary/');
       }
     })
   );
