@@ -70,8 +70,11 @@ function createSPAFallback() {
   
   <title>Bangla-English Dictionary</title>
   <script>
-    // Redirect to main app
-    if (window.location.pathname === '/ME-Dictionary/404.html') {
+    // SPA fallback: redirect all 404s to main app for client-side routing
+    var l = window.location;
+    var segmentCount = l.pathname.split('/').length - 1;
+    // Only redirect if we're in the ME-Dictionary path and not already at root
+    if (l.pathname.startsWith('/ME-Dictionary/') && l.pathname !== '/ME-Dictionary/') {
       window.location.href = '/ME-Dictionary/';
     }
   </script>
