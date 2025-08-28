@@ -1,0 +1,286 @@
+{
+  "english": {
+    "hello": {
+      "id": "en-1",
+      "word": "hello",
+      "language": "en",
+      "translation": "হ্যালো",
+      "partOfSpeech": "interjection",
+      "definition": "used as a greeting or to begin a phone conversation",
+      "synonyms": ["hi", "greetings", "salutations"],
+      "antonyms": ["goodbye", "farewell"],
+      "examples": [
+        { "english": "Hello there!", "bangla": "হ্যালো ওখানে!" },
+        { "english": "Hello, how are you?", "bangla": "হ্যালো, আপনি কেমন আছেন?" }
+      ]
+    },
+    "goodbye": {
+      "id": "en-2",
+      "word": "goodbye",
+      "language": "en",
+      "translation": "বিদায়",
+      "partOfSpeech": "interjection",
+      "definition": "used to express farewell",
+      "synonyms": ["bye", "farewell", "adieu"],
+      "antonyms": ["hello", "welcome"],
+      "examples": [
+        { "english": "Goodbye for now!", "bangla": "এখন বিদায়!" },
+        { "english": "Goodbye, see you later!", "bangla": "বিদায়, পরে দেখা হবে!" }
+      ]
+    },
+    "happy": {
+      "id": "en-3",
+      "word": "happy",
+      "language": "en",
+      "translation": "খুশি",
+      "partOfSpeech": "adjective",
+      "definition": "feeling or showing pleasure or contentment",
+      "synonyms": ["joyful", "pleased", "content", "delighted"],
+      "antonyms": ["sad", "unhappy", "miserable", "depressed"],
+      "examples": [
+        { "english": "She looks very happy today.", "bangla": "আজ তিনি খুব খুশি দেখাচ্ছেন।" },
+        { "english": "I'm happy to help you.", "bangla": "আপনাকে সাহায্য করতে আমি খুশি।" }
+      ]
+    },
+    "sad": {
+      "id": "en-4",
+      "word": "sad",
+      "language": "en",
+      "translation": "দুঃখিত",
+      "partOfSpeech": "adjective",
+      "definition": "feeling or showing sorrow; unhappy",
+      "synonyms": ["unhappy", "sorrowful", "depressed", "gloomy"],
+      "antonyms": ["happy", "joyful", "cheerful", "glad"],
+      "examples": [
+        { "english": "He felt sad about the loss.", "bangla": "ক্ষতির জন্য তিনি দুঃখিত বোধ করলেন।" },
+        { "english": "The sad news made everyone cry.", "bangla": "দুঃখজনক খবর সবাইকে কাঁদালো।" }
+      ]
+    },
+    "family": {
+      "id": "en-5",
+      "word": "family",
+      "language": "en",
+      "translation": "পরিবার",
+      "partOfSpeech": "noun",
+      "definition": "a group consisting of parents and children living together in a household",
+      "synonyms": ["household", "house", "kin", "clan"],
+      "antonyms": ["stranger", "outsider"],
+      "examples": [
+        { "english": "My family lives in Dhaka.", "bangla": "আমার পরিবার ঢাকায় বাস করে।" },
+        { "english": "Family comes first.", "bangla": "পরিবার আগে।" }
+      ]
+    },
+    "water": {
+      "id": "en-6",
+      "word": "water",
+      "language": "en",
+      "translation": "পানি",
+      "partOfSpeech": "noun",
+      "definition": "a transparent, odorless, tasteless liquid that forms the seas, lakes, rivers, and rain",
+      "synonyms": ["aqua", "H2O", "adam's ale"],
+      "antonyms": ["land", "dry"],
+      "examples": [
+        { "english": "I need a glass of water.", "bangla": "আমাকে এক গ্লাস পানি দরকার।" },
+        { "english": "Water is essential for life.", "bangla": "জীবনের জন্য পানি অপরিহার্য।" }
+      ]
+    },
+    "food": {
+      "id": "en-7",
+      "word": "food",
+      "language": "en",
+      "translation": "খাবার",
+      "partOfSpeech": "noun",
+      "definition": "any nutritious substance that people or animals eat or drink or that plants absorb in order to maintain life and growth",
+      "synonyms": ["nourishment", "sustenance", "fare", "meal"],
+      "antonyms": ["poison", "toxin"],
+      "examples": [
+        { "english": "The food is delicious.", "bangla": "খাবারটা খুব সুস্বাদু।" },
+        { "english": "We need food to survive.", "bangla": "বেঁচে থাকার জন্য আমাদের খাবার দরকার।" }
+      ]
+    },
+    "home": {
+      "id": "en-8",
+      "word": "home",
+      "language": "en",
+      "translation": "বাড়ি",
+      "partOfSpeech": "noun",
+      "definition": "the place where one lives permanently, especially as a member of a family or household",
+      "synonyms": ["house", "residence", "dwelling", "abode"],
+      "antonyms": ["away", "outside"],
+      "examples": [
+        { "english": "Welcome home!", "bangla": "বাড়িতে স্বাগতম!" },
+        { "english": "This is my home.", "bangla": "এটা আমার বাড়ি।" }
+      ]
+    },
+    "love": {
+      "id": "en-9",
+      "word": "love",
+      "language": "en",
+      "translation": "ভালোবাসা",
+      "partOfSpeech": "noun",
+      "definition": "an intense feeling of deep affection",
+      "synonyms": ["affection", "fondness", "devotion", "adoration"],
+      "antonyms": ["hate", "dislike", "loathing"],
+      "examples": [
+        { "english": "I love my family.", "bangla": "আমি আমার পরিবারকে ভালোবাসি।" },
+        { "english": "Love conquers all.", "bangla": "ভালোবাসা সব কিছু জয় করে।" }
+      ]
+    },
+    "friend": {
+      "id": "en-10",
+      "word": "friend",
+      "language": "en",
+      "translation": "বন্ধু",
+      "partOfSpeech": "noun",
+      "definition": "a person whom one knows and with whom one has a bond of mutual affection",
+      "synonyms": ["pal", "buddy", "companion", "mate"],
+      "antonyms": ["enemy", "foe", "stranger"],
+      "examples": [
+        { "english": "He is my best friend.", "bangla": "তিনি আমার সেরা বন্ধু।" },
+        { "english": "Friends help each other.", "bangla": "বন্ধুরা একে অপরকে সাহায্য করে।" }
+      ]
+    }
+  },
+  "bangla": {
+    "হ্যালো": {
+      "id": "bn-1",
+      "word": "হ্যালো",
+      "language": "bn",
+      "translation": "hello",
+      "partOfSpeech": "interjection",
+      "definition": "used as a greeting",
+      "synonyms": ["নমস্কার", "স্বাগতম"],
+      "antonyms": ["বিদায়"],
+      "examples": [
+        { "english": "Hello there!", "bangla": "হ্যালো ওখানে!" },
+        { "english": "Hello, how are you?", "bangla": "হ্যালো, আপনি কেমন আছেন?" }
+      ]
+    },
+    "খুশি": {
+      "id": "bn-2",
+      "word": "খুশি",
+      "language": "bn",
+      "translation": "happy",
+      "partOfSpeech": "adjective",
+      "definition": "feeling or showing pleasure or contentment",
+      "synonyms": ["আনন্দিত", "সন্তুষ্ট", "প্রফুল্ল"],
+      "antonyms": ["দুঃখিত", "বিষণ্ণ", "অসুখী"],
+      "examples": [
+        { "english": "She looks very happy today.", "bangla": "আজ তিনি খুব খুশি দেখাচ্ছেন।" },
+        { "english": "I'm happy to help you.", "bangla": "আপনাকে সাহায্য করতে আমি খুশি।" }
+      ]
+    },
+    "পরিবার": {
+      "id": "bn-3",
+      "word": "পরিবার",
+      "language": "bn",
+      "translation": "family",
+      "partOfSpeech": "noun",
+      "definition": "a group consisting of parents and children living together",
+      "synonyms": ["গৃহ", "সংসার", "কুল"],
+      "antonyms": ["অপরিচিত"],
+      "examples": [
+        { "english": "My family lives in Dhaka.", "bangla": "আমার পরিবার ঢাকায় বাস করে।" },
+        { "english": "Family comes first.", "bangla": "পরিবার আগে।" }
+      ]
+    },
+    "পানি": {
+      "id": "bn-4",
+      "word": "পানি",
+      "language": "bn",
+      "translation": "water",
+      "partOfSpeech": "noun",
+      "definition": "transparent liquid essential for life",
+      "synonyms": ["জল", "নীর"],
+      "antonyms": ["স্থল", "শুষ্ক"],
+      "examples": [
+        { "english": "I need a glass of water.", "bangla": "আমাকে এক গ্লাস পানি দরকার।" },
+        { "english": "Water is essential for life.", "bangla": "জীবনের জন্য পানি অপরিহার্য।" }
+      ]
+    },
+    "খাবার": {
+      "id": "bn-5",
+      "word": "খাবার",
+      "language": "bn",
+      "translation": "food",
+      "partOfSpeech": "noun",
+      "definition": "something that people eat to maintain life",
+      "synonyms": ["আহার", "ভোজন", "খাদ্য"],
+      "antonyms": ["বিষ", "বিষাক্ত"],
+      "examples": [
+        { "english": "The food is delicious.", "bangla": "খাবারটা খুব সুস্বাদু।" },
+        { "english": "We need food to survive.", "bangla": "বেঁচে থাকার জন্য আমাদের খাবার দরকার।" }
+      ]
+    },
+    "বাড়ি": {
+      "id": "bn-6",
+      "word": "বাড়ি",
+      "language": "bn",
+      "translation": "home",
+      "partOfSpeech": "noun",
+      "definition": "the place where one lives permanently",
+      "synonyms": ["গৃহ", "বাসস্থান", "আবাস"],
+      "antonyms": ["বাইরে", "দূরে"],
+      "examples": [
+        { "english": "Welcome home!", "bangla": "বাড়িতে স্বাগতম!" },
+        { "english": "This is my home.", "bangla": "এটা আমার বাড়ি।" }
+      ]
+    },
+    "ভালোবাসা": {
+      "id": "bn-7",
+      "word": "ভালোবাসা",
+      "language": "bn",
+      "translation": "love",
+      "partOfSpeech": "noun",
+      "definition": "an intense feeling of deep affection",
+      "synonyms": ["প্রেম", "স্নেহ", "মমতা"],
+      "antonyms": ["ঘৃণা", "অপছন্দ"],
+      "examples": [
+        { "english": "I love my family.", "bangla": "আমি আমার পরিবারকে ভালোবাসি।" },
+        { "english": "Love conquers all.", "bangla": "ভালোবাসা সব কিছু জয় করে।" }
+      ]
+    },
+    "বন্ধু": {
+      "id": "bn-8",
+      "word": "বন্ধু",
+      "language": "bn",
+      "translation": "friend",
+      "partOfSpeech": "noun",
+      "definition": "a person with whom one has a bond of mutual affection",
+      "synonyms": ["সঙ্গী", "সখা", "মিত্র"],
+      "antonyms": ["শত্রু", "বিদ্বেষী"],
+      "examples": [
+        { "english": "He is my best friend.", "bangla": "তিনি আমার সেরা বন্ধু।" },
+        { "english": "Friends help each other.", "bangla": "বন্ধুরা একে অপরকে সাহায্য করে।" }
+      ]
+    },
+    "ধন্যবাদ": {
+      "id": "bn-9",
+      "word": "ধন্যবাদ",
+      "language": "bn",
+      "translation": "thank you",
+      "partOfSpeech": "interjection",
+      "definition": "expression of gratitude",
+      "synonyms": ["কৃতজ্ঞতা", "আনুগত্য"],
+      "antonyms": ["অকৃতজ্ঞতা"],
+      "examples": [
+        { "english": "Thank you very much!", "bangla": "আপনাকে অনেক ধন্যবাদ!" },
+        { "english": "Thank you for your help.", "bangla": "আপনার সাহায্যের জন্য ধন্যবাদ।" }
+      ]
+    },
+    "সাহায্য": {
+      "id": "bn-10",
+      "word": "সাহায্য",
+      "language": "bn",
+      "translation": "help",
+      "partOfSpeech": "noun",
+      "definition": "assistance given to someone in need",
+      "synonyms": ["সহায়তা", "সহযোগিতা", "সমর্থন"],
+      "antonyms": ["বাধা", "প্রতিবন্ধকতা"],
+      "examples": [
+        { "english": "I need help.", "bangla": "আমাকে সাহায্য দরকার।" },
+        { "english": "Can you help me?", "bangla": "আপনি কি আমাকে সাহায্য করতে পারেন?" }
+      ]
+    }
+  }
+}

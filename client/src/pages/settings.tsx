@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import BottomNavigation from "@/components/bottom-navigation";
 import ThemeSelector from "@/components/theme-selector";
+import DictionaryImport from "@/components/dictionary-import";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -9,6 +10,7 @@ import { useState } from "react";
 
 export default function Settings() {
   const [showThemeSelector, setShowThemeSelector] = useState(false);
+  const [showDictionaryImport, setShowDictionaryImport] = useState(false);
   const [notifications, setNotifications] = useState(true);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [autoSync, setAutoSync] = useState(false);
@@ -92,6 +94,27 @@ export default function Settings() {
             </CardContent>
           </Card>
 
+          {/* Dictionary Management */}
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="font-medium text-gray-900 dark:text-gray-100 mb-3">Dictionary Management</h3>
+              <div className="space-y-3">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowDictionaryImport(true)}
+                  className="w-full justify-between"
+                  data-testid="button-dictionary-import"
+                >
+                  <span>Manage Dictionaries</span>
+                  <i className="fas fa-book text-gray-400"></i>
+                </Button>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Import custom dictionaries, export your collection, or add new words
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Storage Info */}
           <Card>
             <CardContent className="p-4">
@@ -146,6 +169,10 @@ export default function Settings() {
 
       {showThemeSelector && (
         <ThemeSelector onClose={() => setShowThemeSelector(false)} />
+      )}
+
+      {showDictionaryImport && (
+        <DictionaryImport onClose={() => setShowDictionaryImport(false)} />
       )}
     </div>
   );

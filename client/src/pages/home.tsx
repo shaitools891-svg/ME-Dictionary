@@ -1,36 +1,73 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/header";
 import BottomNavigation from "@/components/bottom-navigation";
 import SearchSection from "@/components/search-section";
 import TranslationResults from "@/components/translation-results";
-import { useQuery } from "@tanstack/react-query";
+import { getSuggestions, commonEnglishWords, commonBanglaWords, type DictionaryWord } from "@/lib/dictionary-data";
+import { dictionaryManager } from "@/lib/dictionary-manager";
 import type { DictionaryEntry } from "@shared/schema";
+
+// Dictionary manager will handle all dictionary operations
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentLanguage, setCurrentLanguage] = useState<'en' | 'bn'>('en');
   const [selectedEntry, setSelectedEntry] = useState<DictionaryEntry | null>(null);
+  const [searchResults, setSearchResults] = useState<DictionaryEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const { data: searchResults, isLoading } = useQuery({
-    queryKey: ['/api/dictionary/search', searchQuery, currentLanguage],
-    queryFn: async () => {
-      if (!searchQuery.trim()) return [];
-      const response = await fetch(`/api/dictionary/search?query=${encodeURIComponent(searchQuery)}&language=${currentLanguage}`);
-      if (!response.ok) throw new Error('Failed to search dictionary');
-      return response.json() as DictionaryEntry[];
-    },
-    enabled: searchQuery.trim().length > 0,
-  });
+  // Search function using dictionary manager
+  const performSearch = (query: string, language: 'en' | 'bn') => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    setIsLoading(true);
+
+    // Use dictionary manager for search
+    setTimeout(() => {
+      const results = dictionaryManager.search(query, language);
+
+      // Also include suggestions from common words
+      const suggestions = getSuggestions(query, language, 3);
+      suggestions.forEach(suggestion => {
+        if (!results.find(r => r.word === suggestion)) {
+          const suggestionEntry: DictionaryEntry = {
+            id: `suggestion-${suggestion}`,
+            word: suggestion,
+            language: language,
+            translation: 'Translation not available - please add to dictionary',
+            partOfSpeech: 'noun',
+            definition: 'Common word - full definition available in complete version',
+            synonyms: null,
+            antonyms: null,
+            examples: null
+          };
+          results.push(suggestionEntry);
+        }
+      });
+
+      setSearchResults(results);
+      setIsLoading(false);
+    }, 300);
+  };
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     setSelectedEntry(null);
+    performSearch(query, currentLanguage);
   };
 
   const handleLanguageToggle = () => {
-    setCurrentLanguage(prev => prev === 'en' ? 'bn' : 'en');
+    const newLanguage = currentLanguage === 'en' ? 'bn' : 'en';
+    setCurrentLanguage(newLanguage);
     setSearchQuery("");
     setSelectedEntry(null);
+    setSearchResults([]);
+    if (searchQuery) {
+      performSearch(searchQuery, newLanguage);
+    }
   };
 
   const handleSelectEntry = (entry: DictionaryEntry) => {
